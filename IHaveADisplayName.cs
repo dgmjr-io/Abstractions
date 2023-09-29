@@ -14,27 +14,24 @@ namespace Dgmjr.Abstractions;
 
 /// <summary>
 /// Marker interface for an object or struct that has a *read-only*
-/// <c><see cref="Description" /></c> property.
+/// <c><see cref="DisplayName" /></c> property.
 /// </summary>
-public interface IHaveADescription
+public interface IHaveADisplayName
 {
     /// <summary>
-    /// The thing's description
+    /// The thing's display name
     /// </summary>
-    string Description { get; }
+    string DisplayName { get; }
 }
 
 /// <summary>
 /// Marker interface for an object or struct that has a *read/write*
-/// <c><see cref="Description" /></c> property.
+/// <c><see cref="DisplayName" /></c> property.
 /// </summary>
-public interface IHaveAWritableDescription : IHaveADescription
+public interface IHaveAWritableDisplayName : IHaveADisplayName
 {
     /// <summary>
-    /// The thing's description
+    /// The thing's display name
     /// </summary>
-    new string Description { set; }
+    new string DisplayName { set; }
 }
-
-
-//public interface IHaveAReadWriteDescription : IHaveADescription, IHaveAWritableDescription { }

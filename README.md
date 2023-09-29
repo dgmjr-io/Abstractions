@@ -28,51 +28,51 @@ This library provides a set of interfaces that can be used to define common func
 
 The following interfaces are defined in this library:
 
-### [IAsyncDisposable](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IAsyncDisposable.cs)
+### [`IAsyncDisposable`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IAsyncDisposable.cs)
 
 Defines the `ValueTask DisposeAsync()` method (for .NET Standard 2.1+) or the `Task DisposeAsync()` method (for <= .NET Standard 2.0)
 
-### [HaveA[Writable]Description](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/HaveADescription.cs)
+### [`IHaveA[Writable]Description`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/HaveADescription.cs)
 
 Defines the `string Description {get;}` property.
 
-### [IHaveA[Writable]Name](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAName.cs)
+### [`IHaveA[Writable]Name`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAName.cs)
 
 Defines the `string Name {get;[set;]}` property.
 
-### [IHaveA[Writable]Uri](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAUri.cs)
+### [`IHaveA[Writable]Uri`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAUri.cs)
 
 Defines the `System.Uri Uri {get;[set;]}` property.
 
-### [IHaveA[Writable]Value](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAValue.cs)
+### [`IHaveA[Writable]Value`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAValue.cs)
 
 Defines the `object Value {get;[set;]}` property.
 
-### [IHaveA[Writable]Value{TValue}](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAValue{TValue}.cs)
+### [`IHaveA[Writable]Value{TValue}`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IHaveAValue{TValue}.cs)
 
 Defines the `TValue Value {get;[set;]}` property.
 
-### [IIdentifiable](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
+### [`IIdentifiable`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
 
 Defines the `object Id {get;}` property.
 
-### [IHaveAWritableId](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
+### [`IHaveAWritableId`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
 
 Defines the `object Id {get;set;}` property.
 
-### [IIdentifiable{TId}](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
+### [`IIdentifiable{TId}`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
 
 Defines the `TId Id {get;}` property.
 
-### [IHaveAWritableId{TId}](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
+### [`IHaveAWritableId{TId}`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IIdentifiable.cs)
 
 Defines the `TId Id {get;set;}` property.
 
-### [ILog](https://github.com/dgmjr-io/Dgmjr.Abstractions/blob/main/Abstractions/ILog.cs)
+### [`ILog`](https://github.com/dgmjr-io/Dgmjr.Abstractions/blob/main/Abstractions/ILog.cs)
 
 Defines the `ILogger Logger {get;}` property
 
-### [IUriConvertible](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IUriConvertible.cs)
+### [`IUriConvertible`](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Abstractions/IUriConvertible.cs)
 
 Defines the `static abstract` methods `FromUri(string s)` and `FromUri(System.Uri uri)` for classes to be able to define a way to convert themselves from a URI (*.NET 7.0+ only*)
 
@@ -91,6 +91,7 @@ public class MyClass : IAsyncDisposable, IHaveADescription, IHaveAName, IHaveAUr
     public async Task DisposeAsync()
     {
         Logger.LogInformation($"Perfoming clean-up task on {nameof(MyClass)}...");
+        /* perform asynchronous task clean-up */
     }
 
     public ILogger Logger { get; }

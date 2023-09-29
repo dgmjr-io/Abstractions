@@ -17,21 +17,21 @@ using System;
 /// <summary>
 /// Defines a mechanism for objects that have a read-only <see cref="System.Uri" />.
 /// </summary>
-public interface IHaveAUri
+public interface IHaveAUriString
 {
     /// <summary>
     /// Gets the URI of the object.
     /// </summary>
-    Uri Uri { get; }
+    string UriString { get; }
 }
 
 /// <summary>
 /// Defines a mechanism for objects that have a writable URI.
 /// </summary>
-public interface IHaveWritableAUri : IHaveAUri
+public interface IHaveAWritableUriString : IHaveAUriString
 {
     /// <summary>
     /// Gets or sets the URI of the object.
     /// </summary>
-    new Uri Uri { set; }
+    new string UriString { set; }
 }

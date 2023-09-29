@@ -1,5 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B283EBC2-E01F-412D-9339-FD56EF114549}" 
+# 
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B283EBC2-E01F-412D-9339-FD56EF114549}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Packages\Versions.props = ..\..\..\Packages\Versions.props
 		..\..\..\Packages\Versions.Local.json = ..\..\..\Packages\Versions.Local.json
@@ -11,13 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\Packages\Packages\Azure.pkgs = ..\..\..\Packages\Packages\Azure.pkgs
 		..\..\..\Packages\Packages\AzureFunctions.pkgs = ..\..\..\Packages\Packages\AzureFunctions.pkgs
 		..\..\..\Packages\Packages\DDD.pkgs = ..\..\..\Packages\Packages\DDD.pkgs
-		..\..\..\Packages\Packages\EFCore.pkgs = ..\..\..\Packages\Packages\EFCore.pkgs
 		..\..\..\Packages\Packages\GlobalBuild.pkgs = ..\..\..\Packages\Packages\GlobalBuild.pkgs
 		..\..\..\Packages\Packages\GlobalCodeGenerators.pkgs = ..\..\..\Packages\Packages\GlobalCodeGenerators.pkgs
 		..\..\..\Packages\Packages\Images.pkgs = ..\..\..\Packages\Packages\Images.pkgs
 		..\..\..\Packages\Packages\McMaster.CommandLineUtils.pkgs = ..\..\..\Packages\Packages\McMaster.CommandLineUtils.pkgs
 		..\..\..\Packages\Packages\MediatR.pkgs = ..\..\..\Packages\Packages\MediatR.pkgs
 		..\..\..\Packages\Packages\Microsoft.AspNetCore.pkgs = ..\..\..\Packages\Packages\Microsoft.AspNetCore.pkgs
+		..\..\..\Packages\Packages\Microsoft.EntityFrameworkCore.pkgs = ..\..\..\Packages\Packages\Microsoft.EntityFrameworkCore.pkgs
 		..\..\..\Packages\Packages\Microsoft.Extensions.pkgs = ..\..\..\Packages\Packages\Microsoft.Extensions.pkgs
 		..\..\..\Packages\Packages\Microsoft.Identity.pkgs = ..\..\..\Packages\Packages\Microsoft.Identity.pkgs
 		..\..\..\Packages\Packages\Microsoft.VisualStudio.Shell.Interop.pkgs = ..\..\..\Packages\Packages\Microsoft.VisualStudio.Shell.Interop.pkgs
@@ -44,41 +45,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\Packages\Versions\EFCore.props = ..\..\..\Packages\Versions\EFCore.props
 		..\..\..\Packages\Versions\JsonPatch.props = ..\..\..\Packages\Versions\JsonPatch.props
 		..\..\..\Packages\Versions\MediatR.props = ..\..\..\Packages\Versions\MediatR.props
+		..\..\..\Packages\Versions\Microsoft.Build.props = ..\..\..\Packages\Versions\Microsoft.Build.props
 		..\..\..\Packages\Versions\Microsoft.CodeAnalysis.props = ..\..\..\Packages\Versions\Microsoft.CodeAnalysis.props
 		..\..\..\Packages\Versions\Microsoft.Extensions.Logging.props = ..\..\..\Packages\Versions\Microsoft.Extensions.Logging.props
-		..\..\..\Packages\Versions\MSBuild.props = ..\..\..\Packages\Versions\MSBuild.props
 		..\..\..\Packages\Versions\PowerShell.props = ..\..\..\Packages\Versions\PowerShell.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dgmjr.ComponentModel", "..\ComponentModel\Dgmjr.ComponentModel.csproj", "{D4B82513-4093-4C7A-958D-A6DA9AC72018}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B735C281-B96C-4D7A-A0CB-9D8B6D70656D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgmjr.Abstractions", "Dgmjr.Abstractions.csproj", "{A2F9676F-D2B3-436D-99A7-68FF47AC8741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Local|Any CPU = Local|Any CPU
 		Debug|Any CPU = Debug|Any CPU
-		Staging|Any CPU = Staging|Any CPU
-		Release|Any CPU = Release|Any CPU
 		Testing|Any CPU = Testing|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Local|Any CPU.ActiveCfg = Local|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Local|Any CPU.Build.0 = Local|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Local|Any CPU.Build.0 = Local|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Production|Any CPU.ActiveCfg = Local|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Production|Any CPU.Build.0 = Local|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F9676F-D2B3-436D-99A7-68FF47AC8741}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D4B82513-4093-4C7A-958D-A6DA9AC72018} = {B735C281-B96C-4D7A-A0CB-9D8B6D70656D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01F9810E-EBD5-47F1-B330-96079051631F}
