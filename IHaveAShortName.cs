@@ -11,6 +11,7 @@
  */
 
 namespace Dgmjr.Abstractions;
+
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>

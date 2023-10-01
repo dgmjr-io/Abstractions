@@ -28,7 +28,8 @@ public interface IIdentifiable
 /// Marker interface for an object or struct that has a *read-only*
 /// <c><see cref="Id">Id</see></c> property of type <typeparamref name="TId"/>.
 /// </summary>
-public interface IIdentifiable<TId> where TId : IComparable, IEquatable<TId>
+public interface IIdentifiable<TId>
+    where TId : IComparable, IEquatable<TId>
 {
     /// <summary>
     /// The object's unique identifier.
@@ -48,12 +49,12 @@ public interface IHaveAWritableId : IIdentifiable
     new object Id { set; }
 }
 
-
 /// <summary>
 /// Marker interface for an object or struct that has a *read/write*
 /// <c><see cref="Id">Id</see></c> property.
 /// </summary>
-public interface IHaveAWritableId<TId> : IIdentifiable<TId> where TId : IComparable, IEquatable<TId>
+public interface IHaveAWritableId<TId> : IIdentifiable<TId>
+    where TId : IComparable, IEquatable<TId>
 {
     /// <summary>
     /// The object's unique identifier.

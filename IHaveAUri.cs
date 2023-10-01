@@ -12,6 +12,7 @@
 
 
 namespace Dgmjr.Abstractions;
+
 using System;
 
 /// <summary>
