@@ -1,3 +1,5 @@
+namespace Dgmjr.Abstractions;
+
 public interface IHaveAGuid
 {
     guid Guid { get; }
