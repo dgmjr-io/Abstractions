@@ -34,5 +34,5 @@ public interface IHaveAWritableUriString : IHaveAUriString
     /// <summary>
     /// Gets or sets the URI of the object.
     /// </summary>
-    new string UriString { set; }
+    new string UriString { get; set; }
 }

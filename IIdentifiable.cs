@@ -46,7 +46,7 @@ public interface IHaveAWritableId : IIdentifiable
     /// <summary>
     /// The object's unique identifier.
     /// </summary>
-    new object Id { set; }
+    new object Id { get; set; }
 }
 
 /// <summary>
@@ -59,5 +59,5 @@ public interface IHaveAWritableId<TId> : IIdentifiable<TId>
     /// <summary>
     /// The object's unique identifier.
     /// </summary>
-    new TId Id { set; }
+    new TId Id { get; set; }
 }

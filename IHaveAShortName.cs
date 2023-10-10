@@ -35,5 +35,5 @@ public interface IHaveAWritableShortName : IHaveAShortName
     /// Gets or sets the short name of the object.
     /// </summary>
     [FromString]
-    new string ShortName { set; }
+    new string ShortName { get; set; }
 }

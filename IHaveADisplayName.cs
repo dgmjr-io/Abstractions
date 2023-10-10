@@ -33,5 +33,5 @@ public interface IHaveAWritableDisplayName : IHaveADisplayName
     /// <summary>
     /// The thing's display name
     /// </summary>
-    new string DisplayName { set; }
+    new string DisplayName { get; set; }
 }

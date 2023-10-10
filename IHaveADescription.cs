@@ -33,7 +33,7 @@ public interface IHaveAWritableDescription : IHaveADescription
     /// <summary>
     /// The thing's description
     /// </summary>
-    new string Description { set; }
+    new string Description { get; set; }
 }
 
 

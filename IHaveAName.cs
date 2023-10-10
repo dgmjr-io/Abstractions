@@ -35,5 +35,5 @@ public interface IHaveAWritableName : IHaveAName
     /// Gets or sets the name of the object.
     /// </summary>
     [FromString]
-    new string Name { set; }
+    new string Name { get; set; }
 }

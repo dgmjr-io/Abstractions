@@ -7,5 +7,5 @@ public interface IHaveAGuid
 
 public interface IHaveAWritableGuid : IHaveAGuid
 {
-    new guid Guid { set; }
+    new guid Guid { get; set; }
 }

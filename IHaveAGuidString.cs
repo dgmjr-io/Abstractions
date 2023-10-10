@@ -33,5 +33,5 @@ public interface IHaveAWritableGuidString : IHaveAGuidString
     /// <summary>
     /// Gets or sets the Guid of the object.
     /// </summary>
-    new string GuidString { set; }
+    new string GuidString { get; set; }
 }

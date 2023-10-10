@@ -31,5 +31,5 @@ public interface IHaveAWritableValue : IHaveAValue
     /// <summary>
     /// Gets or sets the value of the object.
     /// </summary>
-    new object Value { set; }
+    new object Value { get; set; }
 }

@@ -34,5 +34,5 @@ public interface IHaveWritableAUri : IHaveAUri
     /// <summary>
     /// Gets or sets the URI of the object.
     /// </summary>
-    new Uri Uri { set; }
+    new Uri Uri { get; set; }
 }
