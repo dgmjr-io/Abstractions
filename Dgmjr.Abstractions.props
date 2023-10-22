@@ -13,5 +13,6 @@
 <Project>
     <ItemGroup>
         <Using Include="Dgmjr.Abstractions"/>
+        <Using Include="Dgmjr.Primitives.Abstractions"/>
     </ItemGroup>
 </Project>

@@ -29,7 +29,7 @@ public interface IHaveAUri
 /// <summary>
 /// Defines a mechanism for objects that have a writable URI.
 /// </summary>
-public interface IHaveWritableAUri : IHaveAUri
+public interface IHaveAWritableUri : IHaveAUri
 {
     /// <summary>
     /// Gets or sets the URI of the object.
