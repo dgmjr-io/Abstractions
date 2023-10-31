@@ -24,6 +24,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout Dgmjr.ComponentModel alongside the repo being compiled
+    - uses: actions/checkout@v4.1.1
+      with: 
+        token: ${{ secrets.GITHUB_TOKEN }}
+        repo: dgmjr-io/Dgmjr.ComponentModel
+        path: ComponentModel        
     - name: Build using DgmjrSdk
       uses: dgmjr-actions/build-using-dgmjrsdk@main
       with:
