@@ -29,7 +29,7 @@ public interface IIdentifiable
 /// <c><see cref="Id">Id</see></c> property of type <typeparamref name="TId"/>.
 /// </summary>
 public interface IIdentifiable<TId>
-    where TId : IComparable, IEquatable<TId>
+// where TId : IComparable, IEquatable<TId>
 {
     /// <summary>
     /// The object's unique identifier.
@@ -54,7 +54,7 @@ public interface IHaveAWritableId : IIdentifiable
 /// <c><see cref="Id">Id</see></c> property.
 /// </summary>
 public interface IHaveAWritableId<TId> : IIdentifiable<TId>
-    where TId : IComparable, IEquatable<TId>
+// where TId : IComparable, IEquatable<TId>
 {
     /// <summary>
     /// The object's unique identifier.
