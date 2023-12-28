@@ -39,7 +39,7 @@ jobs:
         private-nuget-endpoint: ${{ vars.PROGET_ENDPOINT_URL }}
         private-nuget-api-key: ${{ secrets.PROGET_API_KEY }}
         repo: dgmjr-io/Abstractions
-        project-file-path: Dgmjr.Abstractions.csproj
+        project-file-path: Dgmjr.Abstractions.csproj -p:BuildFromSource=false
 
   nuget-push:
     needs: build
