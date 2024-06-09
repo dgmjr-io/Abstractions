@@ -24,37 +24,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Dgmjr.ComponentModel alongside the repo being compiled
-      uses: dgmjr-actions/git-checkout@main
-      with: 
-        token: ${{ secrets.GITHUB_TOKEN }}
-        repo: dgmjr-io/Dgmjr.ComponentModel
-        path: ComponentModel        
-    - name: Build using DgmjrSdk
+    - name: Build with DGMJR-IO SDK
       uses: dgmjr-actions/build-using-dgmjrsdk@main
-      with:
+      with: 
         git-token: ${{ secrets.GITHUB_TOKEN }}
-        environment: Release
-        git-nuget-endpoint: ${{ vars.GIT_NUGET_ENDPOINT }}
-        private-nuget-endpoint: ${{ vars.PROGET_ENDPOINT_URL }}
-        private-nuget-api-key: ${{ secrets.PROGET_API_KEY }}
-        repo: dgmjr-io/Abstractions
-        project-file-path: Dgmjr.Abstractions.csproj -p:BuildFromSource=false
-
-  nuget-push:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run nuget-push
-      uses: dgmjr-actions/nuget-push@main
-      with:
-        git-token: ${{ secrets.GITHUB_TOKEN }}
-        environment: Release
-        git-nuget-endpoint: ${{ vars.GIT_NUGET_ENDPOINT }}
-        private-nuget-endpoint: ${{ vars.PROGET_ENDPOINT_URL }}
-        private-nuget-api-key: ${{ secrets.PROGET_API_KEY }}
         repo: dgmjr-io/Abstractions
         project-file-path: Dgmjr.Abstractions.csproj
-        push-nuget: false
-        push-dgmjr-io: true
         push-github: true
