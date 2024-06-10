@@ -29,3 +29,30 @@ jobs:
         environment: Release
         private-nuget-api-key: ${{ secrets.FEEDZ_IO_TOKEN }}
         private-nuget-endpoint: ${{ vars.FEEDZ_IO_ENDPOINT_URL }}
+    - name: Upload the NuGet Package
+      uses: actions/upload-artifact@v3.1.3
+      with:
+        # Artifact name
+        name: NuGetPackage
+        # A file, directory or wildcard pattern that describes what to upload
+        path: "**/*.nupkg"
+        # The desired behavior if no files are found using the provided path.
+        if-no-files-found: error
+        retention-days: 1
+
+  push-nuget:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run nuget-push
+      uses: dgmjr-actions/nuget-push@main
+      with:
+        git-token: ${{ secrets.GITHUB_TOKEN }}
+        environment: Release
+        git-nuget-endpoint: ${{ vars.GIT_NUGET_ENDPOINT }}
+        private-nuget-endpoint: ${{ vars.FEEDZ_IO_ENDPOINT_URL }}
+        private-nuget-api-key: ${{ secrets.FEEDZ_IO_TOKEN }}
+        repo: dgmjr-io/DgmjrSdk
+        push-github: true
+        push-dgmjr-io: true
+        push-nuget: false
