@@ -28,4 +28,4 @@ jobs:
         push-github: true
         environment: Release
         private-nuget-api-key: ${{ secrets.FEEDZ_IO_TOKEN }}
-        private-nuget-endpoint: ${{ secrets.FEEDZ_IO_ENDPOINT_URL }}
+        private-nuget-endpoint: ${{ vars.FEEDZ_IO_ENDPOINT_URL }}
