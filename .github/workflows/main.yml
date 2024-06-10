@@ -13,11 +13,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-permissions:
-  packages: write
-  actions: read
-  repository-projects: read
-
 jobs:
   build:
 
