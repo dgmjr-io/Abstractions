@@ -22,7 +22,7 @@ jobs:
     - name: Build with DGMJR-IO SDK
       uses: dgmjr-actions/build-using-dgmjrsdk@main
       with: 
-        git-token: ${{ secrets.GITHUB_TOKEN }}
+        git-token: ${{ secrets.GODLIKE_PAT }}
         repo: dgmjr-io/Abstractions
         project-file-path: Dgmjr.Abstractions.csproj
         push-github: true
