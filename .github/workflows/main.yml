@@ -26,3 +26,6 @@ jobs:
         repo: dgmjr-io/Abstractions
         project-file-path: Dgmjr.Abstractions.csproj
         push-github: true
+        environment: Release
+        private-nuget-api-key: ${{ secrets.FEEDZ_IO_TOKEN }}
+        private-nuget-endpoint: ${{ secrets.FEED_IO_ENDPOINT_URL }}
