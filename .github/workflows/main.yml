@@ -48,6 +48,7 @@ jobs:
       uses: dgmjr-actions/nuget-push@main
       with:
         git-token: ${{ secrets.GITHUB_TOKEN }}
+        project-file-path: Dgmjr.Abstractions.csproj
         environment: Release
         git-nuget-endpoint: ${{ vars.GIT_NUGET_ENDPOINT }}
         private-nuget-endpoint: ${{ vars.FEEDZ_IO_ENDPOINT_URL }}
